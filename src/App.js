@@ -33,28 +33,30 @@ function App() {
   };
 
   return (
-    <div className="calculator">
-      <h2>Simple Calculator</h2>
-      <input
-        type="text"
-        placeholder="Enter number 1"
-        value={num1}
-        onChange={handleNum1Change}
-      />
-      <input
-        type="text"
-        placeholder="Enter number 2"
-        value={num2}
-        onChange={handleNum2Change}
-      />
-      <div className="buttons">
-        <button onClick={handleAdd}>Add</button>
-        <button onClick={handleSubtract}>Subtract</button>
-        <button onClick={handleMultiply}>Multiply</button>
-        <button onClick={handleDivide}>Divide</button>
+    <>
+      <div className="calculator">
+        <h2>Simple Calculator</h2>
+        <input
+          type="text"
+          placeholder="Enter number 1"
+          value={num1}
+          onChange={handleNum1Change}
+        />
+        <input
+          type="text"
+          placeholder="Enter number 2"
+          value={num2}
+          onChange={handleNum2Change}
+        />
+        <div className="buttons">
+          <button onClick={handleAdd}>Add</button>
+          <button onClick={handleSubtract}>Subtract</button>
+          <button onClick={handleMultiply}>Multiply</button>
+          <button onClick={handleDivide}>Divide</button>
+        </div>
+        {result !== '' && <h1>Result: {result}</h1>}
       </div>
-      {result !== '' && <h1>Result: {result}</h1>}
-    </div>
+    </>
   );
 }
 
